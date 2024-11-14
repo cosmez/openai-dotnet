@@ -15,6 +15,7 @@ namespace OpenAI.Chat
             ChatMessageRole.Assistant => "assistant",
             ChatMessageRole.Tool => "tool",
             ChatMessageRole.Function => "function",
+            ChatMessageRole.Model => "model",
             _ => throw new ArgumentOutOfRangeException(nameof(value), value, "Unknown ChatMessageRole value.")
         };
 
@@ -23,6 +24,7 @@ namespace OpenAI.Chat
             if (StringComparer.OrdinalIgnoreCase.Equals(value, "system")) return ChatMessageRole.System;
             if (StringComparer.OrdinalIgnoreCase.Equals(value, "user")) return ChatMessageRole.User;
             if (StringComparer.OrdinalIgnoreCase.Equals(value, "assistant")) return ChatMessageRole.Assistant;
+            if (StringComparer.OrdinalIgnoreCase.Equals(value, "model")) return ChatMessageRole.Model;
             if (StringComparer.OrdinalIgnoreCase.Equals(value, "tool")) return ChatMessageRole.Tool;
             if (StringComparer.OrdinalIgnoreCase.Equals(value, "function")) return ChatMessageRole.Function;
             throw new ArgumentOutOfRangeException(nameof(value), value, "Unknown ChatMessageRole value.");

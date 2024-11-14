@@ -92,4 +92,7 @@ public enum ChatMessageRole
     /// </remarks>
     [CodeGenMember("Function")]
     Function,
+
+    [CodeGenMember("Model")]
+    Model
 }
